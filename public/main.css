@@ -3,16 +3,16 @@
 ********************/
 
 body, html, div, label, p, h1, h2, h3, h4, h5, h6, form, a, input, textarea {
-	margin: 0; 
-	padding: 0; 
-	border: 0; 
+	/*margin: 0;*/
+	padding: 0;
+	border: 0;
 	outline: none;
 }
 
 
 body {
-	line-height: 1;
-	font-size: 88%;
+	/*line-height: 1;
+	font-size: 88%;*/
 	font-family: 'Open Sans', arial, sans-serif;
 	background: #FAFAFA;
 	color: #585858;
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 100%;
     padding: 23px 0;
 	margin: 0 15px;
-	color: #FF0040;
+	/*color: #FF0040;*/
 	letter-spacing: 1px;
 }
 
@@ -53,7 +53,7 @@ main {
 header {
 	background: #FF0040;
 	background: -webkit-linear-gradient(#F5A9BC, #FF0040);
-	background: -o-linear-gradient(#F5A9BC, #FF0040); 
+	background: -o-linear-gradient(#F5A9BC, #FF0040);
 	background: -moz-linear-gradient(#F5A9BC, #FF0040);
 	background: linear-gradient(#F5A9BC, #FF0040);
 }

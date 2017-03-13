@@ -18,15 +18,21 @@ function handler (req, res) {
   })
 }
   else if (endpoint === '/node') {
-  res.writeHead(200, {"Content-Type": "text/html"});
-  res.write('hello node');
-  res.end();
+    res.writeHead(200, {"Content-Type": "text/html"});
+    res.write('hello node');
+    res.end();
 }
-else if (endpoint === '/girls') {
-res.writeHead(200, {"Content-Type": "text/html"});
-res.write('hello girls');
-res.end();
+  else if (endpoint === '/girls') {
+    res.writeHead(200, {"Content-Type": "text/html"});
+    res.write('hello girls');
+    res.end();
 }
+  else {
+    res.writeHead(404, {"Content-Type": "text/plain"});
+    res.write('404');
+    res.end();
+  }
+
 }
 
 var server = http.createServer(handler);

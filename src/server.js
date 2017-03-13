@@ -1,5 +1,6 @@
 var http = require('http');
 var fs = require('fs');
+var querystring = require('querystring');
 
 function handler(req, res) {
     var endpoint = req.url;
@@ -13,7 +14,21 @@ function handler(req, res) {
             }
             res.end(file);
         })
-    } else {
+    }
+    else if (endpoint === '/create-post') {
+      res.writeHead(302, {"Location": "/"});
+      var allData = '';
+      req.on('data', function(dataPart) {
+        allData += dataPart;
+      });
+      req.on('end', function(){
+        var convertedData = querystring.parse(allData);
+        console.log(convertedData);
+        res.end();
+      })
+    }
+
+    else {
         var extension = endpoint.split('.')[1];
         var extensionType = {
             'html': 'text/html',
